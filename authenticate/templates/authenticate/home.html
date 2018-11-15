@@ -1,11 +1,12 @@
 {% extends 'authenticate/base.html' %}
 
 {% block content %}
-<h1>Hello, 'World'</h1>
+<h1>Hello, 'User Welcome'</h1><br>
 {% if user.is_authenticated %}
-     <p>Name : {{ user.first_name }} {{ user.last_name }}</p>
-     <p>Username : {{ user.username }}</p>
-     <p>Email : {{ user.email }}</p>
+
+     <h2><p>Username : {{ user.username }}</p></h2>
+     <h4><p>Name : {{ user.first_name }} {{ user.last_name }}</p>
+         <p>Email : {{ user.email }}</p></h4>
 
 {% endif %}
 {% endblock %}
